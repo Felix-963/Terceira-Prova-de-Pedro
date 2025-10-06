@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="conjuntos-de-dados" class="level2">
 <h2 class="anchored" data-anchor-id="conjuntos-de-dados">Conjuntos de Dados</h2>
 <p>Para exemplificar as técnicas de visualização, foram utilizados dois conjuntos de dados: o clássico <code>iris</code>, disponível no pacote seaborn, e um conjunto sintético gerado aleatoriamente.</p>
-<div id="ea11754c" class="cell" data-execution_count="1">
+<div id="dcc3e90d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="visualizações-com-matplotlib" class="level2">
 <h2 class="anchored" data-anchor-id="visualizações-com-matplotlib">Visualizações com Matplotlib</h2>
 <p>O pacote matplotlib é uma das bibliotecas mais tradicionais para visualização em Python, oferecendo grande flexibilidade e controle sobre os elementos gráficos.</p>
-<div id="802a4642" class="cell" data-execution_count="2">
+<div id="8c3b436c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Dispersão do conjunto iris</span></span>
@@ -199,7 +199,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\felix\AppData\Local\Temp\ipykernel_19820\1479246110.py:21: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.</code></pre>
+<pre><code>C:\Users\felix\AppData\Local\Temp\ipykernel_8960\1479246110.py:21: MatplotlibDeprecationWarning:
+
+The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -213,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="visualizações-com-plotnine" class="level2">
 <h2 class="anchored" data-anchor-id="visualizações-com-plotnine">Visualizações com Plotnine</h2>
 <p>O pacote plotnine é inspirado na gramática dos gráficos do ggplot2 (R), permitindo a construção de visualizações de forma mais declarativa e intuitiva.</p>
-<div id="ba258eb1" class="cell" data-execution_count="3">
+<div id="d79f9693" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, geom_histogram, geom_boxplot, labs, theme_minimal</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Dispersão do conjunto iris</span></span>
@@ -259,7 +262,7 @@ A abordagem imperativa do matplotlib oferece maior detalhamento e personalizaç�
 <p>O método de Monte Carlo é uma técnica probabilística utilizada para estimar o valor de π. A seguir, apresenta-se a implementação em Python puro e a versão otimizada com Numba.</p>
 <section id="implementação-em-python" class="level3">
 <h3 class="anchored" data-anchor-id="implementação-em-python">Implementação em Python</h3>
-<div id="f6059b5e" class="cell" data-execution_count="4">
+<div id="9aeebc18" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> monte_carlo_pi(n):</span>
@@ -274,14 +277,14 @@ A abordagem imperativa do matplotlib oferece maior detalhamento e personalizaç�
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>tempo_py <span class="op">=</span> time.time() <span class="op">-</span> start</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pi (Python puro): </span><span class="sc">{</span>pi_py<span class="sc">:.6f}</span><span class="ss"> | Tempo: </span><span class="sc">{</span>tempo_py<span class="sc">:.3f}</span><span class="ss">s"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Pi (Python puro): 3.141577 | Tempo: 0.478s</code></pre>
+<pre><code>Pi (Python puro): 3.141577 | Tempo: 0.497s</code></pre>
 </div>
 </div>
 </section>
 <section id="implementação-com-numba" class="level3">
 <h3 class="anchored" data-anchor-id="implementação-com-numba">Implementação com Numba</h3>
 <p>A função abaixo utiliza o decorador <code>@njit</code> do Numba para compilar o código em tempo de execução, acelerando o processamento.</p>
-<div id="29113dad" class="cell" data-execution_count="5">
+<div id="e73b72cd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numba <span class="im">import</span> njit</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -301,8 +304,8 @@ A abordagem imperativa do matplotlib oferece maior detalhamento e personalizaç�
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pi (Numba): </span><span class="sc">{</span>pi_numba<span class="sc">:.6f}</span><span class="ss"> | Tempo: </span><span class="sc">{</span>tempo_numba<span class="sc">:.3f}</span><span class="ss">s"</span>)</span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Aceleração: </span><span class="sc">{</span>tempo_py<span class="op">/</span>tempo_numba<span class="sc">:.2f}</span><span class="ss">x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Pi (Numba): 3.141565 | Tempo: 0.821s
-Aceleração: 0.58x</code></pre>
+<pre><code>Pi (Numba): 3.140958 | Tempo: 1.317s
+Aceleração: 0.38x</code></pre>
 </div>
 </div>
 </section>
@@ -310,7 +313,7 @@ Aceleração: 0.58x</code></pre>
 <section id="avaliação-de-desempenho-para-diferentes-tamanhos-de-amostra" class="level2">
 <h2 class="anchored" data-anchor-id="avaliação-de-desempenho-para-diferentes-tamanhos-de-amostra">Avaliação de Desempenho para Diferentes Tamanhos de Amostra</h2>
 <p>Para comparar o desempenho das duas abordagens, foram realizados testes com diferentes tamanhos de amostra.</p>
-<div id="acc90433" class="cell" data-execution_count="6">
+<div id="fcdb075b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> [<span class="dv">10</span><span class="op">**</span><span class="dv">4</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">5</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">7</span>]</span>
