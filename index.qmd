@@ -203,7 +203,7 @@ A integração dessas ferramentas é recomendada para profissionais e estudantes
 - [Tutorial de Monte Carlo](https://realpython.com/monte-carlo-python/)
 - [Gramática dos Gráficos](https://ggplot2.tidyverse.org/)
 
-quarto preview index.qmd
+
 
 
 
