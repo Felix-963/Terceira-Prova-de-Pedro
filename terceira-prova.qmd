@@ -202,3 +202,6 @@ A integração dessas ferramentas é recomendada para profissionais e estudantes
 - [Seaborn Documentation](https://seaborn.pydata.org/)
 - [Tutorial de Monte Carlo](https://realpython.com/monte-carlo-python/)
 - [Gramática dos Gráficos](https://ggplot2.tidyverse.org/)
+
+
+
